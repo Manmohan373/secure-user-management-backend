@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: secure-user-management
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/secure_user_management
+    username: root
+    password: Manmohan@373
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/MyAppRealm
+keycloak:
+  server-url: http://localhost:8080/
+  realm: MyAppRealm
+  client-id: my-spring-app
+  client-secret: BSZPxDqp0dPOFOpIIAIYOKEbVws8XxhC
+server:
+  port: 1122
