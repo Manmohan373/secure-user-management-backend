@@ -30,6 +30,7 @@ public class UserController {
         userInfo.put("Email", user.get().getEmail() );
         userInfo.put("Address", user.get().getAddress() );
         userInfo.put("Salary", user.get().getSalary() );
+        userInfo.put("email", user.get().getEmail() );
 
         return userInfo;
     }
